@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/promptdriven/pdd
+description: >-
+  The `pdd` command-line interface for Prompt-Driven Development. PDD treats
+  .prompt files as the human-authored source language and generates traditional
+  code (Python, TypeScript, Go, ...) as artifacts. The CLI drives the full
+  Define -> Generate -> Verify -> Test -> Update cycle and offers agentic
+  commands that implement GitHub issues automatically. Command surface captured
+  verbatim from the project README/docs. The binary is packaged in
+  packages/prompt-driven-packages.yml (pdd-cli on PyPI).
+docs: https://github.com/promptdriven/pdd#readme
+repo: https://github.com/promptdriven/pdd
+binary: pdd
+install:
+  uv: uv tool install pdd-cli
+setup:
+  - {name: setup, description: "Create ~/.pdd credentials and provision provider tokens (run once per machine)."}
+  - {name: connect, description: "Launch the local web interface at localhost:9876 to manage PDD projects visually."}
+commands:
+  agentic:
+    - {name: change, usage: "pdd change <issue-url>", description: "Implement a feature request from a GitHub issue (13-step workflow)."}
+    - {name: bug, usage: "pdd bug <issue-url>", description: "Create a failing test that reproduces a reported runtime bug."}
+    - {name: fix, usage: "pdd fix <issue-url>", description: "Fix the failing tests produced by pdd bug."}
+    - {name: split, usage: "pdd split <target-file>", description: "Diagnose and split large dev units (15-step workflow with intent classification and per-child verify gate)."}
+    - {name: generate, usage: "pdd generate <issue-url>", description: "Generate architecture.json from a PRD issue (11-step workflow)."}
+    - {name: test, usage: "pdd test <issue-url>", description: "Generate UI/behavioral tests from issue descriptions (18-step workflow)."}
+  prompt_workflow:
+    - {name: sync, description: "Automate the complete Define->Generate->Verify->Test->Update development cycle with state management and visual feedback."}
+    - {name: checkup, description: "Run prompt/story quality gates and rule-to-story/test coverage matrices (pdd checkup coverage)."}
+notes:
+  - "Recommended flow: choose `pdd bug` then `pdd fix` (bug -> fix) for runtime symptoms; use `pdd change` then `sync` for explicit spec/product changes."
+  - "Repository/agent conventions are captured verbatim in skills/prompt-driven-agents.md."

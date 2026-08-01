@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://pypi.org/project/pdd-cli/
+description: >-
+  First-party package for Prompt-Driven Development (PDD). PDD ships a single
+  Python-based CLI, pdd-cli, published to PyPI by the project maintainer
+  (Greg Tanaka) from the promptdriven/pdd GitHub repository. Registry metadata
+  confirmed against https://pypi.org/pypi/pdd-cli/json (HTTP 200). PDD is a
+  prompt-native development tool, not a client SDK for a hosted API, so this is
+  a CLI/tool package rather than an API client library.
+packages:
+  - language: python
+    registry: pypi
+    name: pdd-cli
+    url: https://pypi.org/project/pdd-cli/
+    source: https://github.com/promptdriven/pdd
+    install: uv tool install pdd-cli
+    version: 0.0.306
+    license: MIT
+    author: Greg Tanaka
+    official: true
+    kind: cli
+    note: The `pdd` command-line interface. See cli/prompt-driven-cli.yml for the command surface.

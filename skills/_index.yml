@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/promptdriven/pdd/blob/main/AGENTS.md
+description: >-
+  Provider-published agent guidance for the PDD (pdd-cli) repository, captured
+  verbatim. PDD exposes agentic CLI commands (pdd change/bug/fix/split/generate/test)
+  and ships an AGENTS.md that documents repository structure, build/test commands,
+  coding conventions, and the bug->fix vs change->sync task-routing policy for
+  coding agents. There is no hosted OpenAPI to ground bespoke API-consumption
+  skills; this is the provider's own agent contract for working in the repo.
+skills:
+  - name: prompt-driven-agents
+    file: prompt-driven-agents.md
+    kind: repository-guidelines
+    verbatim: true
+    source: https://raw.githubusercontent.com/promptdriven/pdd/main/AGENTS.md
+    summary: >-
+      Repository guidelines for coding agents contributing to promptdriven/pdd —
+      module/prompt pairing, Conda env + Makefile targets (make test/coverage/lint/build),
+      Python 3.12+ style, pytest conventions, Conventional Commits, and secret handling.

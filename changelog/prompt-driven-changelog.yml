@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/promptdriven/pdd/blob/main/CHANGELOG.md
+description: >-
+  Structured capture of the PDD (pdd-cli) changelog. PDD releases are cut
+  frequently as patch versions under a single 0.0.x line, tagged v<major.minor.patch>
+  and published to PyPI. The repository CHANGELOG.md follows Conventional-Commit
+  categories (Feat / Fix / CI / Build / Docs / Test) and covers the historical
+  record up to v0.0.241; GitHub Releases carries current release notes. This is
+  a recent-window capture; the live changelog/releases are the source of truth.
+docs: https://github.com/promptdriven/pdd/releases
+changelog_file: https://github.com/promptdriven/pdd/blob/main/CHANGELOG.md
+versioning:
+  scheme: semver-style 0.0.x patch line, git tag v<version>, Conventional Commits
+  tag_regex: '^v(?P<version>\d+\.\d+\.\d+)$'
+  current: 0.0.306
+  distribution: PyPI (pdd-cli)
+entries:
+  - version: '0.0.306'
+    date: '2026-07-19'
+    latest: true
+    highlights:
+      - Latest published release on PyPI (release notes tracked in GitHub Releases).
+  - version: unreleased
+    highlights:
+      - "test: `pdd test --from-story` compiles a story's contract into deterministic offline pytest tagged with @pytest.mark.story."
+      - "agentic_sync: PDD_CHANGED_MODULES env-var fast path bypasses the identify-modules LLM call."
+      - "sync: classify prose/planning LLM output as ProseOutputError before the architecture conformance gate."
+      - "checkup: persist per-step telemetry (step_telemetry) so cloud durable runs can attribute per-step cost/status."
+      - "checkup-gates: multiple runner-level RCE hardening fixes for `pdd checkup --pr --review-loop` (PATH/npm/tsc/PYTHON* vectors)."
+  - version: '0.0.241'
+    date: '2026-05-17'
+    highlights:
+      - "fix ci_drift_heal: symlink filter runs before git check-ignore; skip symlink-traversal paths in git add."
+  - version: '0.0.240'
+    date: '2026-05-16'
+    highlights:
+      - "auto-deps: finalize metadata for successful outputs, filelock CSV cache locking."
+      - "sync: own canonical auto-deps metadata after moving temp outputs."
+      - "Build: bump metadata/completions 0.0.239 -> 0.0.240; add filelock>=3.12."
+  - version: '0.0.239'
+    date: '2026-05-15'
+    highlights:
+      - "checkup: add --fixer-fallback for review-loop runs."
+      - "sync: bucketed 'Out of Tier 1 scope' roll-up to reduce dry-run noise."

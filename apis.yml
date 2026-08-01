@@ -1,7 +1,28 @@
 aid: prompt-driven
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/prompt-driven.png
 name: Prompt Driven
-description: Prompt Driven is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Prompt Driven (PDD) is the company behind Prompt-Driven Development, a
+  prompt-native programming system in which .prompt files are the human-authored
+  source language and traditional code (Python, TypeScript, Go, and others) is
+  generated as an artifact. PDD ships as a single open-source Python CLI, pdd-cli,
+  plus a local web interface, and offers agentic commands that implement GitHub
+  issues automatically through a Define -> Generate -> Verify -> Test -> Update
+  cycle. Positioned as "The Last Programming Language," the project is MIT-licensed,
+  maintained by Greg Tanaka, and backed by 500 Global. It is a developer tool
+  rather than a hosted API — there is no public REST/GraphQL API, OpenAPI spec, or
+  MCP server; the developer surface is the CLI and its GitHub repository.
 url: https://raw.githubusercontent.com/api-evangelist/prompt-driven/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +32,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Developer Tools
+- Artificial Intelligence
+- Code Generation
+- Developer Experience
+- CLI
+- LLM
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +50,34 @@ maintainers:
 common:
 - type: Website
   url: https://promptdriven.ai
+- type: GitHubOrganization
+  url: https://github.com/promptdriven
+- type: SourceCode
+  url: https://github.com/promptdriven/pdd
+- type: Documentation
+  url: https://github.com/promptdriven/pdd#readme
+- type: Support
+  url: https://discord.gg/Yp4RTh8bG7
+- type: TermsOfService
+  url: https://promptdriven.ai/terms-of-service
+- type: PrivacyPolicy
+  url: https://promptdriven.ai/privacy-policy
+- type: Packages
+  url: packages/prompt-driven-packages.yml
+- type: CLI
+  url: cli/prompt-driven-cli.yml
+- type: ChangeLog
+  url: changelog/prompt-driven-changelog.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/prompt-driven-llms.txt
+- type: WellKnown
+  url: well-known/prompt-driven-well-known.yml
+- type: DomainSecurity
+  url: security/prompt-driven-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

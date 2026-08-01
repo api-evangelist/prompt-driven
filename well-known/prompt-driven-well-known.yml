@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: probed
+source: live HTTP probes of promptdriven.ai well-known paths
+description: >-
+  Probe of standard .well-known and discovery endpoints on the Prompt Driven
+  marketing/product host. None are published — promptdriven.ai is a product
+  site fronting the pdd-cli tool, not a hosted API, so no discovery documents
+  are served. Absence is a valid, expected result recorded here for provenance.
+host: promptdriven.ai
+probes:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /llms.txt
+    status: 404
+    file: null
